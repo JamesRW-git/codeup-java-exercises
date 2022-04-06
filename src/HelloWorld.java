@@ -1,15 +1,15 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-
-        int myFavoriteNumber = 100000;
-        System.out.println(myFavoriteNumber);
-
-        String myString = "This is a string";
-        System.out.println(myString);
-
-        float myNumber = 3.14F;
-        System.out.println(myNumber);
+//        System.out.println("Hello, World!");
+//
+//        int myFavoriteNumber = 100000;
+//        System.out.println(myFavoriteNumber);
+//
+//        String myString = "This is a string";
+//        System.out.println(myString);
+//
+//        float myNumber = 3.14F;
+//        System.out.println(myNumber);
 
 //        One post-increments and the other pre-increments
 //        The first one returns 5 and 6 because the increment doesn't occur until after print executes
@@ -41,12 +41,12 @@ public class HelloWorld {
 //        y *= x;
 //        System.out.println(y);
 
-        int x = 10;
-        int y = 2;
-        x /= y;
-        y -= x;
-        System.out.println(x);
-        System.out.println(y);
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
+//        System.out.println(x);
+//        System.out.println(y);
 
 //        Errors out because it doesn't fit within the range of the primitive type int
 //        int tooBig = 10000000000;
@@ -54,8 +54,8 @@ public class HelloWorld {
 
 //        Incrementing past the max value a primitive type can contain causes it to overflow and loop to the
 //        beginning (lowest number for that type)
-        short overflow = Short.MAX_VALUE;
-        System.out.println(++overflow);
+//        short overflow = Short.MAX_VALUE;
+//        System.out.println(++overflow);
 
     }
 }
