@@ -19,15 +19,15 @@ public class ControlFlowExercises {
         long y = 2;
         do {
             System.out.println(y);
-            y = (long) Math.pow(y, 2);
-        } while(y <= 1000000);
+            y*=y;
+        } while(y <= 1000000L);
 
         for (int anotherNumber = 100; anotherNumber >= -10 ; anotherNumber -= 5) {
             System.out.println(anotherNumber);
         }
 
         System.out.println("Squaring Time Again");
-        for (long j = 2; j <= 1000000; j *= j) {
+        for (long j = 2L; j <= 1000000L; j *= j) {
             System.out.println(j);
         }
 
@@ -39,6 +39,8 @@ public class ControlFlowExercises {
                 System.out.println(j + " Buzz");
             } else if ((j % 3) == 0 && j != 0) {
                 System.out.println(j + " Fizz");
+            } else {
+                System.out.println(j);
             }
         }
 
@@ -54,9 +56,7 @@ public class ControlFlowExercises {
             System.out.println("------ | ------- | -----");
 
             for (int j = 1; j <= userChoice; j++) {
-                double userChoiceSquared = Math.pow(j, 2);
-                double userChoiceCubed = Math.pow(j, 3);
-                System.out.printf("%d" + "      |" + " %.0f" + "       |" + " %.0f%n", j, userChoiceSquared, userChoiceCubed);
+                System.out.printf("%-6d | %-7d | %-6d%n", j, j*j, j*j*j);
             }
 
             System.out.println("Would you like to continue? (y/n)");
@@ -75,15 +75,15 @@ public class ControlFlowExercises {
             System.out.println("Enter a numerical grade (0-100):");
             int userGrade = scanner.nextInt();
 
-            if (userGrade >= 88 && userGrade <= 100) {
+            if (userGrade >= 88) {
                 System.out.printf("%d is an A%n", userGrade);
-            } else if (userGrade >= 80 && userGrade <= 87) {
+            } else if (userGrade >= 80) {
                 System.out.printf("%d is a B%n", userGrade);
-            } else if (userGrade >= 67 && userGrade <= 79) {
+            } else if (userGrade >= 67) {
                 System.out.printf("%d is a C%n", userGrade);
-            } else if (userGrade >= 60 && userGrade <= 66) {
+            } else if (userGrade >= 60) {
                 System.out.printf("%d is a D%n", userGrade);
-            } else if (userGrade >= 1 && userGrade <= 59) {
+            } else if (userGrade >= 1) {
                 System.out.printf("%d is a F%n", userGrade);
             } else if (userGrade == 0) {
                 System.out.printf("%d...you forgot to turn it in, didn't you?%n", userGrade);
