@@ -17,7 +17,7 @@ public class ConsoleIOLec {
         System.out.println("How long have you lived there?");
         int years = scanner.nextInt();
 
-        System.out.printf("%s is the best city in %s. I've lived here for %d years.", city, state, years);
+        System.out.printf("%s is the best city in %s.\n I've lived here for %d years.", city, state, years);
 
 
 //        scanner.next() will only return characters until a whitespace or newline is encountered
