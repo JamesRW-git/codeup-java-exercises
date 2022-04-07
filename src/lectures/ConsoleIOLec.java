@@ -1,3 +1,5 @@
+package lectures;
+
 import java.util.Scanner;
 
 public class ConsoleIOLec {
