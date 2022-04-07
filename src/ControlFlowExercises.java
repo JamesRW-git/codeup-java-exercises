@@ -16,10 +16,10 @@ public class ControlFlowExercises {
             x -= 5;
         } while (x >= -10);
 
-        double y = 2;
+        long y = 2;
         do {
-            System.out.printf("%.0f%n", y);
-            y = Math.pow(y, 2);
+            System.out.println(y);
+            y = (long) Math.pow(y, 2);
         } while(y <= 1000000);
 
         for (int anotherNumber = 100; anotherNumber >= -10 ; anotherNumber -= 5) {
@@ -27,11 +27,8 @@ public class ControlFlowExercises {
         }
 
         System.out.println("Squaring Time Again");
-        double numToSquare = 2;
-        System.out.printf("%.0f%n", numToSquare);
-        for (int j = 1; j <= 4 ; j++) {
-            numToSquare = Math.pow(numToSquare, 2);
-            System.out.printf("%.0f%n", numToSquare);
+        for (long j = 2; j <= 1000000; j *= j) {
+            System.out.println(j);
         }
 
         for (int j = 0; j <= 100; j++) {
