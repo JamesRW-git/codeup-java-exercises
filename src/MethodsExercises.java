@@ -66,25 +66,37 @@ public class MethodsExercises {
     }
 
     public static void customDi(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter how many sides your di has: ");
-        int numSides = scanner.nextInt();
-        System.out.println("Enter how many dice you want to roll: ");
-        int numDice = scanner.nextInt();
-        int min = 1;
-        int range = numSides - min + 1;
-        int numRolls = 0;
-        for (int i = 0; i < numDice; i++) {
-                numRolls++;
-                int rand = (int) (Math.random() * range) + min;
-                System.out.printf("Di %d Rolled a %d%n", numRolls, rand);
-                if(rand == numSides) {
-                    System.out.println("Critical success!");
-                } else if (rand == 1) {
-                    System.out.println("Critical failure!");
-                }
-        }
+        boolean userContinue = true;
+        do {
+            Scanner scanner = new Scanner(System.in);
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Enter how many sides your di has: ");
+            int numSides = scanner.nextInt();
+            System.out.println("Enter how many dice you want to roll: ");
+            int numDice = scanner.nextInt();
+            int min = 1;
+            int range = numSides - min + 1;
+            int numRolls = 0;
+            for (int i = 0; i < numDice; i++) {
+                    numRolls++;
+                    int rand = (int) (Math.random() * range) + min;
+                    System.out.printf("Di %d Rolled a %d%n", numRolls, rand);
+                    if(rand == numSides) {
+                        System.out.println("^Critical success!^");
+                    } else if (rand == 1) {
+                        System.out.println("^Critical failure!^");
+                    }
+            }
+            System.out.println("Do you want to roll more dice? (y/n)");
+            String userContinues = scan.nextLine();
+            if (userContinues.equalsIgnoreCase("y")) {
+                userContinue = true;
+            } else {
+                userContinue = false;
+            }
+        } while (userContinue);
     }
-    }
+
+}
 
 
