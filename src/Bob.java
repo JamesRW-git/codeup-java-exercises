@@ -9,12 +9,16 @@ public class Bob {
 
             String userBobInteraction = scanner.nextLine();
 
-            if (userBobInteraction.endsWith("?")) {
+
+            if (userBobInteraction.endsWith("?") && !userBobInteraction.contains("videogames") &&
+                    !userBobInteraction.contains("video games")) {
                 System.out.println("Bobiverse69: Sure.");
             } else if (userBobInteraction.endsWith("!")) {
                 System.out.println("Bobiverse69: Whoa, chill out!");
             } else if (userBobInteraction.isEmpty()) {
                 System.out.println("Bobiverse69: Fine. Be that way. Can I go now?");
+            } else if (userBobInteraction.contains("videogames") || userBobInteraction.contains("video games")){
+                System.out.println("Bobiverse69: Dude, I LOVE video games!");
             } else {
                 System.out.println("Whatever. Can I go now?");
             }
