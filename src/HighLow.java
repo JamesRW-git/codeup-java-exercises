@@ -43,7 +43,6 @@ public class HighLow {
 
     public static int guessANumber() {
         boolean validateGuess = true;
-        boolean gameOverMan = true;
         Scanner scanner = new Scanner(System.in);
         int userGuess;
         System.out.println("Guess what number I'm thinking of (1-100)");
