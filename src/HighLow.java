@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class HighLow {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         boolean gameOverMan = true;
         int randomNum = generateRandomNumber();
@@ -43,7 +44,6 @@ public class HighLow {
 
     public static int guessANumber() {
         boolean validateGuess = true;
-        Scanner scanner = new Scanner(System.in);
         int userGuess;
         System.out.println("Guess what number I'm thinking of (1-100)");
         do {
