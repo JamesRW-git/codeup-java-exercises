@@ -5,16 +5,30 @@ public class HighLow {
         boolean gameOverMan = true;
         int randomNum = generateRandomNumber();
         int userGuess = guessANumber();
+        int numGuesses = 1;
+        int guessLimit = 9;
         do {
             if (randomNum == userGuess) {
                 System.out.println("GOOD GUESS!");
+                System.out.printf("You made %d guesses!", numGuesses);
                 gameOverMan = false;
-            } else if (randomNum < userGuess) {
+            } else if (randomNum < userGuess && numGuesses < 10) {
                 System.out.println("LOWER");
+                System.out.printf("You have made %d guesses%n", numGuesses);
+                System.out.printf("You have %d guesses remaining%n", guessLimit);
+                guessLimit--;
+                numGuesses++;
                 userGuess = guessANumber();
-            } else if (randomNum > userGuess) {
+            } else if (randomNum > userGuess && numGuesses < 10) {
                 System.out.println("HIGHER");
+                System.out.printf("You have made %d guesses%n", numGuesses);
+                System.out.printf("You have %d guesses remaining%n", guessLimit);
+                guessLimit--;
+                numGuesses++;
                 userGuess = guessANumber();
+            } else if (randomNum != userGuess && numGuesses >= 10) {
+                System.out.println("YOU ARE OUT OF GUESSES");
+                gameOverMan = false;
             }
         } while (gameOverMan);
     }
