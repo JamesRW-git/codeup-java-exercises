@@ -3,8 +3,10 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+    //Field
     private Scanner scanner;
 
+    //Constructor
     public Input() {
         this.scanner = new Scanner(System.in);
     }

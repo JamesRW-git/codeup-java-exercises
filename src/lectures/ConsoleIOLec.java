@@ -22,7 +22,7 @@ public class ConsoleIOLec {
         System.out.printf("%s is the best city in %s.\n I've lived here for %d years.", city, state, years);
 
 
-//        scanner.next() will only return characters until a whitespace or newline is encountered
+//        scanner.next() will only return oop.characters until a whitespace or newline is encountered
 //        System.out.print("Enter something: ");
 //        String userInput = scanner.next();
 
