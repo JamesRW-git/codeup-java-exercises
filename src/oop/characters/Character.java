@@ -29,4 +29,8 @@ public class Character {
 
     //Behaviors that all Characters Share
 
+    public void attack() {
+        System.out.println("Attack!");
+    }
+
 }

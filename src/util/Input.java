@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Input {
     //Field
-    private Scanner scanner;
+    private static Scanner scanner;
 
     //Constructor
     public Input() {
@@ -12,50 +12,47 @@ public class Input {
     }
 
     //Methods
-    public String getString() {
-        System.out.println("Enter string");
-       return scanner.nextLine();
+    public static String getString(String prompt) {
+        System.out.println(prompt);
+        return scanner.nextLine();
     }
 
-    public boolean yesNo() {
-        System.out.println("Yes or no?");
-        String yn = scanner.nextLine();
-        if (yn.equalsIgnoreCase("y")) {
-            return true;
-        } else if (yn.equalsIgnoreCase("yes")) {
+    public static boolean yesNo(String prompt) {
+        String yn = scanner.next();
+        if (yn.equalsIgnoreCase("y") || yn.equalsIgnoreCase("yes")) {
             return true;
         } else {
             return false;
         }
     }
 
-    public int getInt(int min, int max) {
-        System.out.printf("Enter an integer between %d and %d%n", min, max);
-        int input = scanner.nextInt();
-        if(input > min && input < max) {
-            return input;
+    public static int getInt(int min, int max) {
+        System.out.println("Enter an integer between " + min + " and " + max);
+        int userInput = scanner.nextInt();
+        if(userInput < min || userInput > max) {
+            return getInt(min, max);
         } else{
-            getInt(min, max);
-        } return input;
+            return userInput;
+        }
     }
 
-    public int getInt() {
+    public static int getInt() {
         System.out.println("Enter an integer");
         int input = scanner.nextInt();
         return input;
     }
 
-    public double getDouble(double min, double max) {
+    public static double getDouble(double min, double max) {
         System.out.printf("Enter a double between %f and %f%n", min, max);
         double input = scanner.nextDouble();
-        if(input > min && input < max) {
-            return input;
+        if(input < min || input > max) {
+            return getDouble(min, max);
         } else {
-            getDouble(min, max);
-        } return input;
+            return input;
+        }
     }
 
-    public double getDouble() {
+    public static double getDouble() {
         System.out.println("Enter a double");
         double input = scanner.nextDouble();
         return input;

@@ -1,23 +1,14 @@
 package oop.characters.hero;
 
-public class Hero {
+import oop.characters.Character;
 
-    private int heroHealth;
+public class Hero extends Character {
+
     private String name;
 
-    public Hero() {}
-
-    public Hero(int heroHealth, String name) {
-        this.heroHealth = heroHealth;
+    public Hero(int hp, int attackDamage, String name) {
+        super(hp, attackDamage);
         this.name = name;
-    }
-
-    public int getHeroHealth() {
-        return this.heroHealth;
-    }
-
-    public void setHeroHealth(int heroHealth) {
-        this.heroHealth = heroHealth;
     }
 
     public String getName() {
@@ -26,5 +17,10 @@ public class Hero {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("Hero attack!");
     }
 }
