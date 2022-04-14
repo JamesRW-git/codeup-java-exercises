@@ -32,6 +32,4 @@ public class GameRunner {
 
         Enemy enemyToAttack = enemies[random.nextInt(enemies.length - 1)];
     }
-
-
 }

@@ -42,4 +42,12 @@ public class Rectangle {
         double area = this.length * this.width;
         return area;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                '}';
+    }
 }
