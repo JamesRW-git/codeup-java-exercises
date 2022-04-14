@@ -1,7 +1,9 @@
-package oop.characters.hero;
+package oop.characters;
 
 public class Knight extends Hero{
+
     public Knight(String name) {
         super(150, 50, name);
     }
+
 }

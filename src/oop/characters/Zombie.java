@@ -1,6 +1,8 @@
-package oop.characters.enemies;
+package oop.characters;
 
-public class Zombie extends Enemy{
+import oop.characters.Character;
+
+public class Zombie extends Enemy {
 
     private boolean isRotting;
 
@@ -19,6 +21,12 @@ public class Zombie extends Enemy{
 
     @Override
     public void attack() {
-        System.out.println("Brrrraaainnnss...");
+        System.out.println("Eating brains!");
     }
+
+
+
+
+
+
 }

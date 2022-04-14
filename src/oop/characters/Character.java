@@ -1,10 +1,13 @@
 package oop.characters;
 
+import static oop.characters.Attackable.baseAttackDamage;
+
 public class Character {
 
-    //Properties all Characters Share
-    private int hp;
-    private int attackDamage;
+    //    PROPERTIES ALL CHARACTERS SHARE
+    protected int hp;
+    protected int attackDamage;
+    protected int spAttackDamage;
 
     public Character(int hp, int attackDamage) {
         this.hp = hp;
@@ -27,10 +30,18 @@ public class Character {
         this.attackDamage = attackDamage;
     }
 
-    //Behaviors that all Characters Share
+//    BEHAVIORS THAT ALL CHARACTERS SHARE
 
     public void attack() {
         System.out.println("Attack!");
+
+        if (attackDamage > baseAttackDamage) {
+            System.out.println("Attacked for " + attackDamage + " damage");
+        } else {
+            System.out.println("Attacked for " + spAttackDamage + " damage!");
+        }
     }
+
+
 
 }

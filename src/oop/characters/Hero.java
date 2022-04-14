@@ -1,6 +1,4 @@
-package oop.characters.hero;
-
-import oop.characters.Character;
+package oop.characters;
 
 public class Hero extends Character {
 
@@ -19,8 +17,7 @@ public class Hero extends Character {
         this.name = name;
     }
 
-    @Override
-    public void attack() {
-        System.out.println("Hero attack!");
+    public void spAttack() {
+        System.out.println("Used special attack for " + spAttackDamage + " damage!");
     }
 }

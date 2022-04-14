@@ -1,4 +1,4 @@
-package oop.characters.enemies;
+package oop.characters;
 
 public class Dragon extends Enemy{
 
@@ -7,10 +7,13 @@ public class Dragon extends Enemy{
     }
 
     public void fly() {
-        System.out.println("Flying!");
+        System.out.println("Flying");
     }
 
     public void attack() {
-        System.out.println("Breathes fire!");
+        System.out.println("Breathe fire!");
     }
+
+
+
 }

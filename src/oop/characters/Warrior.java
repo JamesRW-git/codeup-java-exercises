@@ -1,6 +1,8 @@
-package oop.characters.hero;
+package oop.characters;
 
-public class Warrior extends Hero{
+import oop.characters.Character;
+
+public class Warrior extends Hero {
 
     public Warrior(String name) {
         super(150, 25, name);
@@ -10,5 +12,6 @@ public class Warrior extends Hero{
     public void attack() {
         System.out.println("Warrior attack!");
     }
+
 
 }
