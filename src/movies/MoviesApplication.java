@@ -2,11 +2,9 @@ package movies;
 
 import util.Input;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static movies.MoviesArray.findAll;
-import static util.Input.getString;
 
 
 public class MoviesApplication {
@@ -58,6 +56,8 @@ public class MoviesApplication {
                         }
                     }
                     break;
+                default:
+                    System.out.println("Please enter a valid input");
             }
 
             System.out.println("Would you like to search again? (y/n)");
