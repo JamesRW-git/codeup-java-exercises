@@ -5,19 +5,15 @@ import java.util.List;
 
 public class Student {
     public static void main(String[] args) {
-        Student student1 = new Student("Jack");
-        student1.addGrade(100);
-        student1.addGrade(50);
-        System.out.println(student1.getGradeAverage());
+
     }
 
     private String studentName;
 
-    private static ArrayList<Integer> gradesList;
+    private static ArrayList<Integer> gradesList = new ArrayList<>();
 
     public Student(String studentName) {
         this.studentName = studentName;
-        this.gradesList = new ArrayList<>();
     }
 
     public String getStudentName() {
@@ -25,16 +21,26 @@ public class Student {
     }
 
     public void addGrade(int grade) {
-        gradesList.add(grade);
+        this.gradesList.add(grade);
     }
 
-    public static double getGradeAverage(){
-        double gradesAdded = 0;
-        int numGrades = 0;
-        for(int grade : gradesList) {
-            numGrades++;
-            gradesAdded += grade;
-        }
-        return gradesAdded/numGrades;
+//    public static double getGradeAverage(){
+//        double gradesAdded = 0;
+//        int numGrades = 0;
+//        for(int grade : gradesList) {
+//            numGrades++;
+//            gradesAdded += grade;
+//        }
+//        return gradesAdded/numGrades;
+//    }
+
+    public double getGradeAverage(){
+        int totalPoints = this.gradesList.stream().reduce(0, (sum, currentGradeElement) -> {
+            System.out.println("The sums is currently: " + sum);
+            System.out.println("The current grade element is: " + currentGradeElement);
+            System.out.println("********************************");
+            return sum + currentGradeElement;
+        });
+        return (double) totalPoints / this.gradesList.size();
     }
 }
