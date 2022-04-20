@@ -43,6 +43,7 @@ public class GradesApplication {
             System.out.println("The user " + userQuery + " does not exist");
         }
     }
+
     private static HashMap<String, Student> getStudents() {
         Student student1 = new Student("Kyle");
         student1.addGrade(100);

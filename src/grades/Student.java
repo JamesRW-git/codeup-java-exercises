@@ -10,7 +10,7 @@ public class Student {
 
     private String studentName;
 
-    private static ArrayList<Integer> gradesList = new ArrayList<>();
+    private ArrayList<Integer> gradesList = new ArrayList<>();
 
     public Student(String studentName) {
         this.studentName = studentName;
