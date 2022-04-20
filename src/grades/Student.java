@@ -13,7 +13,7 @@ public class Student {
 
     private String studentName;
 
-    private ArrayList<Integer> gradesList;
+    private static ArrayList<Integer> gradesList;
 
     public Student(String studentName) {
         this.studentName = studentName;
@@ -28,7 +28,7 @@ public class Student {
         gradesList.add(grade);
     }
 
-    public double getGradeAverage(){
+    public static double getGradeAverage(){
         double gradesAdded = 0;
         int numGrades = 0;
         for(int grade : gradesList) {
