@@ -2,6 +2,8 @@ package util;
 
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class Input {
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -32,8 +34,12 @@ public class Input {
     }
 
     public static int getInt(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextInt();
+        try{
+            return Integer.parseInt(getString(prompt));
+        } catch(NumberFormatException ex) {
+            System.out.println("Not an integer, please enter an integer");
+            return getInt(prompt);
+        }
     }
 
     public static double getDouble(double min, double max) {
@@ -46,8 +52,12 @@ public class Input {
         }
     }
 
-    public static double getDouble(String prompt){
-        System.out.println(prompt);
-        return scanner.nextDouble();
+    public static double getDouble(String prompt) {
+        try {
+            return Double.parseDouble(getString(prompt));
+        } catch (NumberFormatException ex) {
+            System.out.println("Not a double, please enter an double");
+            return getDouble(prompt);
+        }
     }
 }
