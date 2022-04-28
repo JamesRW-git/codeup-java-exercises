@@ -22,18 +22,23 @@ public class WorkingWithFiles {
         getStringsFromFile(directory, fileName);
     }
 
-    public static void createFile(String directory, String filename) throws IOException {
+    public static void createFile(String directory, String filename){
         Path dataDirectory = Paths.get(directory);
         Path dataFile = Paths.get(directory, filename);
-        if (Files.notExists(dataDirectory)) {
-            Files.createDirectories(dataDirectory);
-            System.out.println("Created directory: " + directory);
+        try{
+            if (Files.notExists(dataDirectory)) {
+                Files.createDirectories(dataDirectory);
+                System.out.println("Created directory: " + directory);
+            }
+
+            if (! Files.exists(dataFile)) {
+                Files.createFile((dataFile));
+                System.out.println("Created file: " + filename);
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
         }
 
-        if (! Files.exists(dataFile)) {
-            Files.createFile((dataFile));
-            System.out.println("Created file: " + filename);
-        }
     }
 
     public static void writeGroceryList(String directory, String fileName) throws IOException {

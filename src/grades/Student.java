@@ -34,13 +34,19 @@ public class Student {
 //        return gradesAdded/numGrades;
 //    }
 
-    public double getGradeAverage(){
-        int totalPoints = this.gradesList.stream().reduce(0, (sum, currentGradeElement) -> {
-            System.out.println("The sums is currently: " + sum);
-            System.out.println("The current grade element is: " + currentGradeElement);
-            System.out.println("********************************");
-            return sum + currentGradeElement;
+//    public double getGradeAverage(){
+//        int totalPoints = this.gradesList.stream().reduce(0, (sum, currentGradeElement) -> {
+//            System.out.println("The sums is currently: " + sum);
+//            System.out.println("The current grade element is: " + currentGradeElement);
+//            System.out.println("********************************");
+//            return sum + currentGradeElement;
+//        });
+//        return (double) totalPoints / this.gradesList.size();
+//    }
+
+    public double getGradeAverage() {
+        int total = this.gradesList.stream().reduce(0, (sum, element) -> {
+            return sum + element;
         });
-        return (double) totalPoints / this.gradesList.size();
-    }
+        return (double) total / this.gradesList.size();
 }
